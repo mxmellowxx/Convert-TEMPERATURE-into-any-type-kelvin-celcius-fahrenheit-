@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+int celcius(){
+    float n1,f,k;
+cout<<"1.USING FAHRENHEIT"<<"\n2.USING KELVIN"<<"\nENTER OPTION NUMBER: ";
+cin>>n1;
+if(n1==1){
+    cout<<"\nENTER FAHRENHEIT: ";
+    cin>>f;
+    cout<<"\nCELCIUS = "<<(f-32)*5/9;}
+else if(n1==2){cout<<"\nENTER KELVIN: ";
+cin>>k;
+cout<<"\nCELCIUS = "<<k-273.15;
+}else {cout<<"\nWRONG OPTION";}
+}
+
+void fahrenheit(){
+    float n1,k,c;
+    cout<<"\n1.USING KELVIN"<<"\n2.USING CELCIUS"<<"\nENTER OPTION NUMBER: ";
+    cin>>n1;
+    if(n1==1){cout<<"\nENTER KELVIN: ";
+    cin>>k;
+    cout<<"\nFAHRENHEIT = "<<(k-273.15)*9/5+32;}
+   else if(n1==2){cout<<"\nENTER CELCIUS: ";
+    cin>>c;
+    cout<<"\nFAHRENHIET = "<<(c*9/5)+32;}
+    else{cout<<"\nWRONG OPTION";}}
+
+
+    void kelvin(){
+    float n1,f,c;
+    cout<<"\n1.USING FAHRENHEIT"<<"\n2.USING CELCIUS"<<"\nENTER OPTION NUMBER: ";
+    cin>>n1;
+    if(n1==1){cout<<"\nENTER FAHRENHEIT: ";
+    cin>>f;
+    cout<<"\nKELVIN = "<<(f+459.67)*5/9;}
+   else if(n1==2){cout<<"\nENTER CELCIUS: ";
+    cin>>c;
+    cout<<"\nKELVIN = "<<c+273.15;}
+    else{cout<<"\nWRONG OPTION";}}
+
+
+int main()
+{
+    int n1;
+   cout<<"1.CELCIUS"<<"\n2.FAHRENHEIT"<<"\n3.KELVIN"<<"\nENTER OPTION NUMBER: ";
+   cin>>n1;
+   if(n1==1){
+    celcius();
+   }else if(n1==2){fahrenheit();}
+   else if(n1==3){kelvin();}
+   else{cout<<"\nWRONG INPUT";}
+
+
+    return 0;
+}
